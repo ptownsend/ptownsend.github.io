@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lifesize getUserMedia test for Doubango</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./js/polyfill.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <p>Using the doubango plugin, generic height and width constraints don't work:
+        <pre>{ audio: true, video: { height: 1920, width: 1080 } }</pre>
+        We get a "class not exposed for automation" error in IE.
+        And we can't <pre>.then</pre> off of the getUserMedia promise.
+        <br/><br/>
+        Code works fine in chrome, and in IE11 with the temasys plugin.
+      </p>
+      <div id="buttons">
+        <button id="exact">Exact</button>
+        <button id="heightWidth">Generic height & width</button>
+        <button id="stop">stop</button>
+      </div>
+      <div id="info"></div>
+      <div>
+        <video id='video1' style="height: 260px; width: 360px;"></video>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/adapter-latest.js"></script>
+  </body>
+</html>
