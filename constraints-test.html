@@ -8,16 +8,19 @@
   </head>
   <body>
     <div class="container">
-      <p>Using the doubango plugin, generic height and width constraints don't work:
+      <p>Using the doubango plugin, preferred height and width constraints don't work:
         <pre>{ audio: true, video: { height: 1920, width: 1080 } }</pre>
-        We get a "class not exposed for automation" error in IE.
-        And we can't <pre>.then</pre> off of the getUserMedia promise.
+        We get a "Class doesn't support Automation" error in IE.
+        And the value returned by getUserMedia's .catch method doesn't appear
+        to be a promise, you can't .then off of it.
+        Please see lines 51 through 58 of main.js, and the console.log in
+        Chrome and IE using <a href='constraints-temasys.html'>temasys</a>
         <br/><br/>
         Code works fine in chrome, and in IE11 with the temasys plugin.
       </p>
       <div id="buttons">
         <button id="exact">Exact</button>
-        <button id="heightWidth">Generic height & width</button>
+        <button id="heightWidth">Preferred height & width</button>
         <button id="stop">stop</button>
       </div>
       <div id="info"></div>

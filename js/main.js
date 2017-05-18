@@ -48,11 +48,14 @@ exactButton.onclick = function () {
 function getMedia(constraints) {
   bridgeTemasys();
   stopStream();
-  return navigator.mediaDevices.getUserMedia(constraints).then(gotStream).catch(function (e) {
+  const returnedPromise = navigator.mediaDevices.getUserMedia(constraints).then(gotStream).catch(function (e) {
     var message = 'getUserMedia error: ' + e.name;
     alert(message);
     console.log(message);
   });
+
+  console.log("returnedPromise", returnedPromise)
+  return returnedPromise;
 }
 
 function gotStream(mediaStream) {
