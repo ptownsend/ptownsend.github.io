@@ -1,5 +1,6 @@
 ## Examples for https://github.com/DoubangoTelecom/webrtc-plugin
+Please try in both Chrome and IE
 
 ### Constraints and Promises issue
-- https://ptownsend.github.io/constraints-test.html
-- Using Temasys plugin example: https://ptownsend.github.io/constraints-temasys.html 
+- [Constraints Test](https://ptownsend.github.io/constraints-test.html)
+- [Constraints Test with Temasys](https://ptownsend.github.io/constraints-temasys.html)
