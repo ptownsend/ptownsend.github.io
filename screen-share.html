@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lifesize getUserMedia test for Doubango</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./js/polyfill.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div id="buttons">
+        <button id="startButton">Start Camera and Screen Share</button>
+        <button id="stopButton">Stop Camera</button>
+        <button id="callButton">Call</button>
+        <button id="hangupButton">Hangup</button>
+      </div>
+      <div id="info"></div>
+      <div>
+        <video id='localVideo' style="height: 260px; width: 360px;"></video>
+        <video id='localScreen' style="height: 260px; width: 360px;"></video>
+      </div>
+      <div>
+        <video id='remoteVideo' style="height: 260px; width: 360px;"></video>
+        <video id='remoteScreen' style="height: 260px; width: 360px;"></video>
+      </div>
+    </div>
+    <div>
+      <a href="https://github.com/ptownsend/ptownsend.github.io">Source Code</a>
+    </div>
+    <div id="ls-extension"></div>
+    <script type="text/javascript" src="./js/screen-share-main.js"></script>
+    <script type="text/javascript" src="//doubango.org/rtc-plugin/adapter/adapter-latest.js"></script>
+  </body>
+</html>
